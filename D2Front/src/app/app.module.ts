@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ItemsComponent } from './components/items/items.component';
 import { PerksComponent } from './components/perks/perks.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { WeaponListComponent } from './components/weapon-list/weapon-list.component';
 
 
 @NgModule({
@@ -14,7 +15,9 @@ import { StatsComponent } from './components/stats/stats.component';
     AppComponent,
     ItemsComponent,
     PerksComponent,
-    StatsComponent
+    StatsComponent,
+    WeaponListComponent,
+  
   ],
   imports: [
     BrowserModule,

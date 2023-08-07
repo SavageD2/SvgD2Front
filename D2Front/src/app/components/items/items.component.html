@@ -1,9 +1,2 @@
 <p>items works!</p>
-<div>
-    <ul *ngFor="let i of items">
-        <li>
-            <img [src]="getIcons(i.displayProperties.icon)" alt="item icon">
-            {{i.displayProperties.name}}  
-        </li>
-    </ul>
-</div>
+<app-weapon-list [weapons]="items"></app-weapon-list>

@@ -11,15 +11,9 @@ export class ItemsComponent implements OnInit {
 
   items: Item[] = [];
   
-  private ITEM_ICON_URL = "https://www.bungie.net";
-
   constructor (private itemService: ItemService) { }
 
   ngOnInit(): void {
-    this.itemService.getItems().subscribe(items => this.items = items);
-  }
-
-  getIcons(relativeUrl: string) {
-    return `${this.ITEM_ICON_URL}/${relativeUrl}`;
+    
   }
 }
