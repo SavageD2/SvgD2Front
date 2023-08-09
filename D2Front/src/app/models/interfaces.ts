@@ -2,7 +2,8 @@ export interface Item {
 
     displayProperties: DisplayProperties,
     tooltipNotifications: [],
-    collectibleHash: number,
+    iconWatermark: string,
+    iconWatermarkShelved: string,
     backgroundColor: BackgroundColor[],
     screenshot: string,
     itemTypeDisplayName: string,
@@ -179,4 +180,21 @@ export interface TraitIds {
 
 export interface TraitHashes {
     [key: number]: number;
+}
+
+export interface Collectible {
+    id: number;
+    json: {
+        displayProperties: DisplayProperties,
+        scope: number,
+        sourceString: string,
+        sourceHash: number,
+        itemHash: number,
+        presentationNodeType: number,
+        traitIds: TraitIds,
+        traitHashes: TraitHashes,
+        parentNodeHashes: number[],
+        hash: number,
+        index: number,
+    };
 }

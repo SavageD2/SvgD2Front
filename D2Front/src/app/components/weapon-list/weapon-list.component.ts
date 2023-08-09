@@ -19,10 +19,14 @@ export class WeaponListComponent {
   }
 
   getWeapon(): void {
-    this.weaponService.getWeapons().subscribe(weapons => this.weapons = weapons);
+    this.weaponService.getIconWatermark().subscribe(weapons => {
+      console.log(weapons);
+      this.weapons = weapons
+    });
   }
 
   getWeaponIcon(relativeUrl: string) {
-    return `${this.ITEM_ICON_URL}/${relativeUrl}`;
+    console.log(relativeUrl);
+    return `${this.ITEM_ICON_URL}${relativeUrl}`; 
   }
 }

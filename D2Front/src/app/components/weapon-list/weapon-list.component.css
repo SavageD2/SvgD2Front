@@ -1,14 +1,24 @@
-.weapon-card {
-    border: 1px solid #ccc;
-    padding: 10px;
+.weapon-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weapon-item {
+    display: block;
     margin: 10px;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .weapon-card img {
-    width: 50px;
+    text-align: center;  /* Centre le nom de l'arme sous l'icône */
+}
+
+.icon-container {
+    position: relative;
+    width: 50px;  /* exemple de taille */
     height: 50px;
-    margin-bottom: 10px;
-  }
-  
+}
+
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;  /* exemple de taille */
+    height: 20px;
+}

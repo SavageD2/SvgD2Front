@@ -1,10 +1,12 @@
-<p>weapon-list works!</p>
-<div *ngIf="weapons && weapons.length">
-    <div *ngFor="let weapon of weapons">
-      <div class="weapon-card" >
-        <img [src]="getWeaponIcon(weapon.displayProperties.icon)" alt="{{weapon.displayProperties.name}} icon">
-        <h3>{{weapon.displayProperties.name}}</h3>
-      </div>
-    </div>
-  </div>
+<div class="weapon-list">
+    <a *ngFor="let weapon of weapons" class="weapon-item">
+       <div class="icon-container">
+           <img [src]="getWeaponIcon(weapon.displayProperties.icon)" alt="{{weapon.displayProperties.name}} icon">
+           <img *ngIf="weapon.iconWatermark" [src]="getWeaponIcon(weapon.iconWatermark)" class="watermark" alt="Watermark">
+       </div>
+       <span class="weapon-name">{{weapon.displayProperties.name}}</span>
+    </a>
+</div>
+
+
   

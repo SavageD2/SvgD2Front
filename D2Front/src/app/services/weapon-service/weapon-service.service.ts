@@ -15,4 +15,8 @@ export class WeaponServiceService {
   getWeapons(): Observable<Item[]> {
     return this.http.get<Item[]>(`${environment.apiUrl}/api/items/w`);
   }
+
+  getIconWatermark(): Observable<Item[]> {
+    return this.http.get<Item[]>(`${environment.apiUrl}/api/items/w`);
+  }
 }
